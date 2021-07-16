@@ -11,6 +11,11 @@
 # and the following integer(s) should give all numbers in the merged array (in ascending order). 
 # All numbers should be separated with space.
 
+# Example input/output
+# 3 -5 0 5
+# 4 1 2 3 4
+# 7 -5 0 1 2 3 4 5
+
 
 def getArray():
     line = input()          # allows for user to type in the array
