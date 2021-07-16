@@ -25,16 +25,16 @@ def getArray():
     return s
 
 def merge(s1, s2):
-    n1 = len(s1)
-    n2 = len(s2)
+    n1 = len(s1)                                                # gets the length of first input
+    n2 = len(s2)                                                # gets the length of second input
     p1 = 0
     p2 = 0
 
     s = []
-    while(p1 < n1 or p2 < n2):
-        if(p1 < n1 and (p2 >= n2 or s1[p1] < s2[p2])):
-            s.append(s1[p1])
-            p1 += 1
+    while(p1 < n1 or p2 < n2):                                  # makes sure that it stops when it runs out of characters to check in array
+        if(p1 < n1 and (p2 >= n2 or s1[p1] < s2[p2])):          # checks if its in first array and second array is finished or the chararcter in the first array is smaller than its counterpart in the second array
+            s.append(s1[p1])                                    # append that integer to the array
+            p1 += 1                                             # add 1 to the position
 
         else:
             s.append(s2[p2])
@@ -43,10 +43,10 @@ def merge(s1, s2):
     return s
 
 def output(s):
-    print (len(s) , end = " ")
-    print (' '.join(map(str, s)), end = '\n')
+    print (len(s) , end = " ")                                  # prints the total length of the new merged array
+    print (' '.join(map(str, s)), end = '\n')                   
 
-s1 = getArray()
-s2 = getArray()
-s = merge(s1, s2)
-output(s)
+s1 = getArray()                                                 # gets the first line input
+s2 = getArray()                                                 # gets the second line input
+s = merge(s1, s2)                                               # merges the two
+output(s)                                                       # outputs it
