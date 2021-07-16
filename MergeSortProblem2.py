@@ -47,15 +47,15 @@ def merge(s1, s2):
         
     return s
 
-def merge_sort(s):
-    if(len(s) == 1):            # if the length is 1 return the array
+def merge_sort(s):              # very complicated fuction used debugger to step through it
+    if(len(s) == 1):            # if the length is 1 return the character in the array (base case for the recurssion)
         return s
 
     n = int(len(s)/2)           # find the halfway point in the array
 
-    s1 = merge_sort(s[:n])      
+    s1 = merge_sort(s[:n])      # cuts the array in half and does this recurssively until the array has 1 element
     s2 = merge_sort(s[n:])
-    s_merge = merge(s1, s2)
+    s_merge = merge(s1, s2)     # merge s1 and s2
     return s_merge
 
 def output(s):
